@@ -1,0 +1,19 @@
+<h2 class = "css1">
+  {{authors.length}} Authors
+</h2> 
+<ul>
+  <li *ngFor="let a of authors" class="css2">
+  {{a}}
+  </li>
+</ul>
+
+<button class="btn btn-primary"[class.active]="isActive" (click)="onSave()">Save</button>
+<!-- <button> [style.backgroundColor="isActive"? 'blue' : 'white']        </button> -->
+<!-- <button (click)="onSave()"> Save  </button> -->
+<input (keyup.enter)="onKeyUp($event)" />
+<!-- <input [value]="email" (keyup.enter)= "email = $event.target.value; onKeyUp1()" /> -->
+<input [(ngModel)] = "email" (keyup.enter) = "onKeyUp1($event)" />
+
+
+
+
